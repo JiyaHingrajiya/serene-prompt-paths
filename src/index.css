@@ -8,47 +8,47 @@
 
 @layer base {
   :root {
-    /* Spa-inspired color palette */
-    --background: 60 9% 98%;
-    --foreground: 60 9% 15%;
+    /* Orange, Purple, White color palette */
+    --background: 0 0% 100%;
+    --foreground: 270 15% 15%;
 
-    --card: 60 15% 97%;
-    --card-foreground: 60 9% 15%;
+    --card: 0 0% 98%;
+    --card-foreground: 270 15% 15%;
 
-    --popover: 60 15% 97%;
-    --popover-foreground: 60 9% 15%;
+    --popover: 0 0% 98%;
+    --popover-foreground: 270 15% 15%;
 
-    /* Sage green primary */
-    --primary: 95 25% 50%;
-    --primary-foreground: 60 15% 97%;
+    /* Purple primary */
+    --primary: 270 75% 60%;
+    --primary-foreground: 0 0% 100%;
 
-    /* Warm cream secondary */
-    --secondary: 60 15% 90%;
-    --secondary-foreground: 60 9% 15%;
+    /* Light purple secondary */
+    --secondary: 270 25% 95%;
+    --secondary-foreground: 270 15% 15%;
 
-    --muted: 60 15% 92%;
-    --muted-foreground: 60 5% 45%;
+    --muted: 270 15% 92%;
+    --muted-foreground: 270 10% 45%;
 
-    /* Gold accent */
-    --accent: 45 70% 58%;
-    --accent-foreground: 60 9% 15%;
+    /* Orange accent */
+    --accent: 25 95% 60%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 60 15% 97%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 60 15% 85%;
-    --input: 60 15% 90%;
-    --ring: 95 25% 50%;
+    --border: 270 15% 85%;
+    --input: 270 15% 90%;
+    --ring: 270 75% 60%;
 
     --radius: 1rem;
 
-    /* Spa-specific design tokens */
-    --spa-sage: 95 25% 50%;
-    --spa-sage-light: 95 25% 75%;
-    --spa-sage-dark: 95 25% 35%;
-    --spa-cream: 60 15% 95%;
-    --spa-gold: 45 70% 58%;
-    --spa-gold-light: 45 70% 70%;
+    /* Theme-specific design tokens */
+    --spa-sage: 270 75% 60%;
+    --spa-sage-light: 270 50% 75%;
+    --spa-sage-dark: 270 75% 45%;
+    --spa-cream: 0 0% 98%;
+    --spa-gold: 25 95% 60%;
+    --spa-gold-light: 25 95% 70%;
     
     /* Gradients */
     --gradient-spa: linear-gradient(135deg, hsl(var(--spa-sage)) 0%, hsl(var(--spa-sage-light)) 100%);
@@ -82,33 +82,33 @@
   }
 
   .dark {
-    --background: 95 15% 8%;
-    --foreground: 60 15% 95%;
+    --background: 270 15% 8%;
+    --foreground: 0 0% 95%;
 
-    --card: 95 15% 10%;
-    --card-foreground: 60 15% 95%;
+    --card: 270 15% 10%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 95 15% 10%;
-    --popover-foreground: 60 15% 95%;
+    --popover: 270 15% 10%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 95 25% 65%;
-    --primary-foreground: 95 15% 8%;
+    --primary: 270 75% 70%;
+    --primary-foreground: 270 15% 8%;
 
-    --secondary: 95 15% 15%;
-    --secondary-foreground: 60 15% 95%;
+    --secondary: 270 15% 15%;
+    --secondary-foreground: 0 0% 95%;
 
-    --muted: 95 15% 15%;
-    --muted-foreground: 60 5% 65%;
+    --muted: 270 15% 15%;
+    --muted-foreground: 270 10% 65%;
 
-    --accent: 45 70% 65%;
-    --accent-foreground: 95 15% 8%;
+    --accent: 25 95% 65%;
+    --accent-foreground: 270 15% 8%;
 
     --destructive: 0 75% 55%;
-    --destructive-foreground: 60 15% 95%;
+    --destructive-foreground: 0 0% 95%;
 
-    --border: 95 15% 20%;
-    --input: 95 15% 15%;
-    --ring: 95 25% 65%;
+    --border: 270 15% 20%;
+    --input: 270 15% 15%;
+    --ring: 270 75% 70%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
