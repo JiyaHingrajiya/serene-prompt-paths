@@ -2,41 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Spa-inspired design system with calming colors and elegant aesthetics */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Spa-inspired color palette */
+    --background: 60 9% 98%;
+    --foreground: 60 9% 15%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 60 15% 97%;
+    --card-foreground: 60 9% 15%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 60 15% 97%;
+    --popover-foreground: 60 9% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Sage green primary */
+    --primary: 95 25% 50%;
+    --primary-foreground: 60 15% 97%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Warm cream secondary */
+    --secondary: 60 15% 90%;
+    --secondary-foreground: 60 9% 15%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 60 15% 92%;
+    --muted-foreground: 60 5% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Gold accent */
+    --accent: 45 70% 58%;
+    --accent-foreground: 60 9% 15%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 60 15% 97%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 60 15% 85%;
+    --input: 60 15% 90%;
+    --ring: 95 25% 50%;
 
-    --radius: 0.5rem;
+    --radius: 1rem;
+
+    /* Spa-specific design tokens */
+    --spa-sage: 95 25% 50%;
+    --spa-sage-light: 95 25% 75%;
+    --spa-sage-dark: 95 25% 35%;
+    --spa-cream: 60 15% 95%;
+    --spa-gold: 45 70% 58%;
+    --spa-gold-light: 45 70% 70%;
+    
+    /* Gradients */
+    --gradient-spa: linear-gradient(135deg, hsl(var(--spa-sage)) 0%, hsl(var(--spa-sage-light)) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(var(--spa-cream)) 0%, hsl(var(--background)) 100%);
+    --gradient-button: linear-gradient(135deg, hsl(var(--spa-sage)) 0%, hsl(var(--spa-sage-dark)) 100%);
+    
+    /* Shadows */
+    --shadow-spa: 0 8px 32px -4px hsl(var(--spa-sage) / 0.15);
+    --shadow-card: 0 4px 16px -2px hsl(var(--spa-sage) / 0.1);
+    --shadow-button: 0 4px 12px -2px hsl(var(--spa-sage) / 0.2);
+
+    /* Animation transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
     --sidebar-background: 0 0% 98%;
 
@@ -56,33 +82,33 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 95 15% 8%;
+    --foreground: 60 15% 95%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 95 15% 10%;
+    --card-foreground: 60 15% 95%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 95 15% 10%;
+    --popover-foreground: 60 15% 95%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 95 25% 65%;
+    --primary-foreground: 95 15% 8%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 95 15% 15%;
+    --secondary-foreground: 60 15% 95%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 95 15% 15%;
+    --muted-foreground: 60 5% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 45 70% 65%;
+    --accent-foreground: 95 15% 8%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 60 15% 95%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 95 15% 20%;
+    --input: 95 15% 15%;
+    --ring: 95 25% 65%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -100,6 +126,50 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-montserrat;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-montserrat;
+  }
+}
+
+@layer components {
+  .spa-button {
+    @apply relative px-8 py-4 rounded-2xl font-medium transition-all duration-300;
+    @apply bg-gradient-to-br from-spa-sage to-spa-sage-dark;
+    @apply text-primary-foreground shadow-button;
+    @apply hover:scale-105 hover:shadow-spa;
+    @apply active:scale-95;
+    @apply before:absolute before:inset-0 before:rounded-2xl;
+    @apply before:bg-gradient-to-br before:from-white/20 before:to-transparent;
+    @apply before:opacity-0 before:transition-opacity before:duration-300;
+    @apply hover:before:opacity-100;
+  }
+
+  .spa-card {
+    @apply bg-card rounded-3xl p-8 shadow-card;
+    @apply border border-border backdrop-blur-sm;
+    @apply transition-all duration-300 hover:shadow-spa;
+  }
+
+  .hero-title {
+    @apply text-6xl md:text-7xl lg:text-8xl font-light;
+    @apply bg-gradient-to-br from-foreground to-muted-foreground;
+    @apply bg-clip-text text-transparent;
+    @apply leading-tight tracking-tight;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-medium text-foreground;
+    @apply mb-4 tracking-tight;
+  }
+
+  .gradient-bg {
+    background: var(--gradient-hero);
+  }
+
+  .glass-effect {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
   }
 }

@@ -13,6 +13,9 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        montserrat: ['Montserrat', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -47,6 +50,16 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        'spa-sage': {
+          DEFAULT: "hsl(var(--spa-sage))",
+          light: "hsl(var(--spa-sage-light))",
+          dark: "hsl(var(--spa-sage-dark))",
+        },
+        'spa-cream': "hsl(var(--spa-cream))",
+        'spa-gold': {
+          DEFAULT: "hsl(var(--spa-gold))",
+          light: "hsl(var(--spa-gold-light))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -62,6 +75,11 @@ export default {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      boxShadow: {
+        'spa': '0 8px 32px -4px hsl(var(--spa-sage) / 0.15)',
+        'card': '0 4px 16px -2px hsl(var(--spa-sage) / 0.1)',
+        'button': '0 4px 12px -2px hsl(var(--spa-sage) / 0.2)',
       },
       keyframes: {
         "accordion-down": {
