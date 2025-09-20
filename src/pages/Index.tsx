@@ -42,7 +42,7 @@ const blogButtons = [{
   description: "Navigate your tech career with expert guidance"
 }];
 const Index = () => {
-  return <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-gradient-to-br from-background via-spa-cream to-secondary/30">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 glass-effect border-b border-border/50">
         <div className="container mx-auto px-6 py-4">
@@ -61,7 +61,7 @@ const Index = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative min-h-[70vh] flex items-center justify-center gradient-bg">
+      <section className="relative min-h-[70vh] flex items-center justify-center bg-gradient-to-r from-primary/10 via-accent/5 to-primary/10">
         <div className="absolute inset-0 opacity-10 bg-cover bg-center bg-no-repeat" style={{
         backgroundImage: `url(${heroImage})`
       }} />
@@ -108,7 +108,7 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-6 gradient-bg">
+      <section className="py-20 px-6 bg-gradient-to-r from-accent/10 via-primary/5 to-accent/10">
         <div className="container mx-auto text-center max-w-4xl">
           <h2 className="section-title mb-6">
             Ready to Transform Your Learning Journey?
